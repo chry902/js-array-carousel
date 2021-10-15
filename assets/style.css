@@ -31,13 +31,16 @@
 .small_img{
     height: calc(100% /5);
     width: 100%;
-    filter: opacity(0.5);
+    
 
 }
 .jumbo_img>img{
+    width: 100%;
+    height: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
+    
     background-position: center;
+    
 }
 .small_img>img{
     width: 100%;

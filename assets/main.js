@@ -1,9 +1,9 @@
 const items = [
-    'img/01.jpg',
-    'img/02.jpg',
-    'img/03.jpg',
-    'img/04.jpg',
-    'img/05.jpg'
+    './img/01.jpg',
+    './img/02.jpg',
+    './img/03.jpg',
+    './img/04.jpg',
+    './img/05.jpg'
 ];
 
 const title = [
@@ -22,6 +22,65 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
 
+let active = 0;
+
+let img = document.querySelector(".img");
+
+let titolo = document.querySelector(".jumbo_img h2");
+let paragraph = document.querySelector(".jumbo_img p");
+
+let b_b = document.querySelector(".b_b");
+b_b.addEventListener("click", function () {
+    console.log("click");
+    if (active < items.length - 1) {
+
+
+        active++
+        console.log(active);
+        img.setAttribute("src", items[active]);
+        titolo.innerHTML = title[active]
+        paragraph.innerHTML = text[active]
+    } else {
+        (active > items.length - 4)
+
+
+        active--
+        console.log(active);
+        img.setAttribute("src", items[active]);
+    }
+}
+
+)
+
+
+
+let b_t = document.querySelector(".b_t");
+b_t.addEventListener("click", function () {
+
+    console.log("click");
+    if (active > 0) {
+
+
+        active--
+        console.log(active);
+        img.setAttribute("src", items[active]);
+        titolo.innerHTML = title[active]
+    } /*else {
+        (active < items.length - 1)
+
+
+        active++
+        console.log(active);
+        img.setAttribute("src", items[active]);
+    }*/
+}
+
+)
+
+
+
+//let b_t= document
+
 /*
 -cliccare sui bottoni e far scorrere l'immagini
 -fare apparire l'immagine scelta dalle frecce
@@ -29,7 +88,3 @@ const text = [
 
 
 
-for (let i = 0; i < items.length; i++) {
-    const jumbo_img = items[i];
-    console.log(items);
-}
