@@ -30,7 +30,7 @@ let titolo = document.querySelector(".jumbo_img h2");
 let p = document.querySelector(".jumbo_img p");
 let effect = document.querySelector(".effect")
 let b_b = document.querySelector(".b_b");
-
+//let small_img = document.querySelector(".small_img img");
 
 b_b.addEventListener("click", function () {
     console.log("click");
@@ -40,17 +40,20 @@ b_b.addEventListener("click", function () {
         active++
         console.log(active);
         img.setAttribute("src", items[active]);
-        items.classList.add("effect");
+
+        //non trovato l'elemento a qui bisogna dare effect......
+        // small_img.classList.add("effct")
         titolo.innerHTML = title[active];
         p.innerHTML = text[active];
-    } else {
-        (active > items.length - 4)
+    } /*else {
+        (active < items.length + 1)
 
 
         active--
         console.log(active);
         img.setAttribute("src", items[active]);
     }
+    */
 }
 
 )
