@@ -27,9 +27,11 @@ let active = 0;
 let img = document.querySelector(".img");
 
 let titolo = document.querySelector(".jumbo_img h2");
-let paragraph = document.querySelector(".jumbo_img p");
-
+let p = document.querySelector(".jumbo_img p");
+let effect = document.querySelector(".effect")
 let b_b = document.querySelector(".b_b");
+
+
 b_b.addEventListener("click", function () {
     console.log("click");
     if (active < items.length - 1) {
@@ -38,8 +40,9 @@ b_b.addEventListener("click", function () {
         active++
         console.log(active);
         img.setAttribute("src", items[active]);
-        titolo.innerHTML = title[active]
-        paragraph.innerHTML = text[active]
+        items.classList.add("effect");
+        titolo.innerHTML = title[active];
+        p.innerHTML = text[active];
     } else {
         (active > items.length - 4)
 
