@@ -1,10 +1,10 @@
 
 const items = [
-    './img/01.jpeg',
-    './img/02.jpeg',
-    './img/03.jpeg',
-    './img/04.jpeg',
-    './img/05.jpeg',
+    './img/01.jpg',
+    './img/02.jpg',
+    './img/03.jpg',
+    './img/04.jpg',
+    './img/05.jpg',
 ];
 
 const title = [
@@ -86,11 +86,3 @@ su.addEventListener("click", () => {
     jumbo_image.setAttribute(`src`, items[index]);
     document.getElementsByClassName("small_img")[index].classList.add("effect");
 });
-
-
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> f9aed57f3ad3dfb49caeb7e22cee3c25c1922007
