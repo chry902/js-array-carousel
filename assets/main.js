@@ -1,9 +1,10 @@
+
 const items = [
-    './img/01.jpg',
-    './img/02.jpg',
-    './img/03.jpg',
-    './img/04.jpg',
-    './img/05.jpg'
+    './img/01.jpeg',
+    './img/02.jpeg',
+    './img/03.jpeg',
+    './img/04.jpeg',
+    './img/05.jpeg',
 ];
 
 const title = [
@@ -22,75 +23,70 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
 
-let active = 0;
 
-let img = document.querySelector(".img");
+let index = 0;
+
+const jumbo_image = document.querySelector(".img");
+jumbo_image.setAttribute(`src`, items[index]);
 
 let titolo = document.querySelector(".jumbo_img h2");
 let p = document.querySelector(".jumbo_img p");
-let effect = document.querySelector(".effect")
-let b_b = document.querySelector(".b_b");
-//let small_img = document.querySelector(".small_img img");
-
-b_b.addEventListener("click", function () {
-    console.log("click");
-    if (active < items.length - 1) {
 
 
-        active++
-        console.log(active);
-        img.setAttribute("src", items[active]);
 
-        //non trovato l'elemento a qui bisogna dare effect......
-        // small_img.classList.add("effct")
-        titolo.innerHTML = title[active];
-        p.innerHTML = text[active];
-    } /*else {
-        (active < items.length + 1)
+console.log(items);
 
 
-        active--
-        console.log(active);
-        img.setAttribute("src", items[active]);
+//title.classList.toggle("change");
+const giu = document.querySelector(".giu");
+
+giu.addEventListener("click", () => {
+
+    document.getElementsByClassName("small_img")[index].classList.remove("effect");
+
+    if (index === items.length - 1) {
+        index = 0;
+        console.log(index);
+
+
+    } else {
+        index = index + 1;
+        console.log(index);
     }
-    */
-}
+    jumbo_image.setAttribute(`src`, items[index]);
+    titolo.innerHTML = title[index];
+    p.innerHTML = text[index];
+    // document.getElementsByClassName("items")[index].classList.add("effect");
 
-)
+    document.getElementsByClassName(`small_img`)[index].classList.add(`effect`);
 
-
-
-let b_t = document.querySelector(".b_t");
-b_t.addEventListener("click", function () {
-
-    console.log("click");
-    if (active > 0) {
-
-
-        active--
-        console.log(active);
-        img.setAttribute("src", items[active]);
-        titolo.innerHTML = title[active]
-    } /*else {
-        (active < items.length - 1)
-
-
-        active++
-        console.log(active);
-        img.setAttribute("src", items[active]);
-    }*/
-}
-
-)
+});
 
 
 
-//let b_t= document
 
-/*
--cliccare sui bottoni e far scorrere l'immagini
--fare apparire l'immagine scelta dalle frecce
-*/
+const su = document.querySelector(".su")
+
+su.addEventListener("click", () => {
+    document.getElementsByClassName("small_img")[index].classList.remove("effect");
+
+    if (index === 0) {
+        index = items.length - 1;
+        console.log(index);
+        titolo.innerHTML = title[index];
+        p.innerHTML = text[index];
+    } else {
+        index = index - 1;
+
+
+    }
+    titolo.innerHTML = title[index];
+    p.innerHTML = text[index];
+
+    jumbo_image.setAttribute(`src`, items[index]);
+    document.getElementsByClassName("small_img")[index].classList.add("effect");
+});
+
 
 
 

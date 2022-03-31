@@ -1,23 +1,62 @@
 *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* .last{
+
+    
+    display: none;
+}
+
+
+.change{
+color: red;
+}
+
+.change .last{
+    display: block;
+}
+
+.change .first{
+    display: none;
+}
+
+/* tutto funziona in baase alla funzione toggle su js */ 
+
+
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 .img_contain{
+    width: 1000px;
+    height: 550px;
+    box-shadow: 5px 10px 18px rgb(97, 97, 97);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px ;
     
 }
 .jumbo_img{
-    
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px ;
     width: 75%;
-    height: 450px;
-    background-color: aqua;
+    height: 100%;
+    
+}
+.img{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px ;
 }
 
 .contain_small_img{
     width: 25%;
-    height: 450px;
-    background-color: burlywood;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.39);
+    border-radius: 8px;
 }
 
 .b_t, .b_b{
@@ -51,5 +90,7 @@
 }
 
 .effect{
-    border:5px solid rgb(23, 34, 8);
+    
+    padding: 4px;
+    box-shadow: 5px 10px 18px rgb(0, 0, 0);
 }   
