@@ -1,10 +1,10 @@
 
 const items = [
-    './img/01.jpg',
-    './img/02.jpg',
-    './img/03.jpg',
-    './img/04.jpg',
-    './img/05.jpg',
+    './img/01.jpeg',
+    './img/02.jpeg',
+    './img/03.jpeg',
+    './img/04.jpeg',
+    './img/05.jpeg',
 ];
 
 const title = [
